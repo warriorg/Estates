@@ -11,7 +11,9 @@
 #import "HomeViewController.h"
 
 @interface LaunchViewController ()
-
+{
+//    MPMoviePlayerViewController *moviePlayer;
+}
 @end
 
 @implementation LaunchViewController
@@ -22,8 +24,6 @@
     [super viewDidLoad];
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"launch" ofType:@"mp4"];
-    
-    //    [self playMovieAtURL:[NSURL fileURLWithPath:path]];
     
     MPMoviePlayerViewController *moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL fileURLWithPath:path]];
     
@@ -43,9 +43,7 @@
 - (void)movieDidFinish
 {
     HomeViewController *controller = [HomeViewController new];
-    [self presentViewController:controller animated:YES completion:^{
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }];
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 @end
