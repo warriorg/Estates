@@ -7,7 +7,28 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+
+#define WIDTH 1024
 
 @interface BaseViewController : UIViewController
+{
+@protected
+    UIImageView *bgImageView;
+}
+
+@property(nonatomic, strong) UIView *contentView;
+
+- (void)setBackgroudImage:(UIImage *)bgImage;
 
 @end
+
+enum navType
+{
+    navTypeQyjj,
+    navTypeQyys,
+    navTypeXmgk,
+    navTypePzsh,
+    navTypeHxsx,
+    navTypeXssc
+};

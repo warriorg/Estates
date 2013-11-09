@@ -31,7 +31,7 @@
 {
     if ((self = [super init]))
     {
-        self.frame = CGRectMake(0,0, 200, 300);
+        self.frame = CGRectMake(0,0, 200, 100);
         buttonsMutableArray = [[NSMutableArray alloc] init];
         self.cornerRadius = CORNER_RADIUS;
         self.buttonGradient = YES;
@@ -137,9 +137,9 @@
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.frame = CGRectMake(BORDER, buttonY, self.bounds.size.width-BORDER*2, buttonHeight);
         button.titleLabel.font = [UIFont boldSystemFontOfSize:16];
-        button.titleLabel.minimumFontSize = 6;
+        button.titleLabel.minimumScaleFactor = 6;
         button.titleLabel.adjustsFontSizeToFitWidth = YES;
-        button.titleLabel.textAlignment = UITextAlignmentCenter;
+        button.titleLabel.textAlignment = NSTextAlignmentCenter;
         button.backgroundColor = [UIColor clearColor];
         button.tag = i++;
         

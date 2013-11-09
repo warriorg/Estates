@@ -12,7 +12,7 @@
 
 @interface LaunchViewController ()
 {
-//    MPMoviePlayerViewController *moviePlayer;
+    
 }
 @end
 
@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+//    [super viewDidLoad];
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"launch" ofType:@"mp4"];
     
@@ -35,15 +35,7 @@
     moviePlayer.moviePlayer.allowsAirPlay = YES;
     [moviePlayer.moviePlayer stop];
     [self.view addSubview:moviePlayer.view];
-
     
-    [NSTimer scheduledTimerWithTimeInterval:6 target:self selector:@selector(movieDidFinish) userInfo:nil repeats:NO];
-}
-
-- (void)movieDidFinish
-{
-    HomeViewController *controller = [HomeViewController new];
-    [self presentViewController:controller animated:YES completion:nil];
 }
 
 @end

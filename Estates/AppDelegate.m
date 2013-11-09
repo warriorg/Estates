@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LaunchViewController.h"
+#import "HomeViewController.h"
 
 @implementation AppDelegate
 
@@ -18,10 +19,18 @@
     LaunchViewController *launchController = [[LaunchViewController alloc] init];
     self.window.rootViewController = launchController;
     
+    [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(movieDidFinish) userInfo:nil repeats:NO];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+- (void)movieDidFinish
+{
+    [self.window.rootViewController dismissViewControllerAnimated:NO completion:nil];
+    HomeViewController *controller = [HomeViewController new];
+    self.window.rootViewController = controller;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

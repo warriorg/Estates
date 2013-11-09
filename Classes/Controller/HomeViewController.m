@@ -7,9 +7,12 @@
 //
 
 #import "HomeViewController.h"
+#import "TSActionSheet.h"
+#import "NavMenu.h"
 
 @interface HomeViewController ()
-
+{
+}
 @end
 
 @implementation HomeViewController
@@ -17,10 +20,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    UIImageView *bgImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 1024, 700)];
-    [bgImage setImage:[UIImage imageNamed:@"home.jpg"]];
-    [self.view addSubview:bgImage];
 }
+
 
 @end

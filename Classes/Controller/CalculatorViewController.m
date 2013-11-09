@@ -14,25 +14,14 @@
 
 @implementation CalculatorViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    NSArray *nibView =  [[NSBundle mainBundle] loadNibNamed:@"HouseLoanCalculatorView" owner:self options:nil];
+    UIView *calView = [nibView objectAtIndex:0];
+//    calView.center = CGPointMake(650, 250);
+    [self.contentView addSubview:calView];
 }
 
 @end
