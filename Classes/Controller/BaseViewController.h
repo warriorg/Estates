@@ -15,6 +15,12 @@
 {
 @protected
     UIImageView *bgImageView;
+    UIButton *btnCompanyIntro;
+    UIButton *btnQyys;
+    UIButton *btnXmgk;
+    UIButton *btnPzsh;
+    UIButton *btnHxsx;
+    UIButton *btnXssc;
 }
 
 @property(nonatomic, strong) UIView *contentView;
