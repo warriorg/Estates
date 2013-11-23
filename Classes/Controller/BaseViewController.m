@@ -10,7 +10,9 @@
 #import "NavMenu.h"
 #import "QyjjViewController.h"
 #import "XsscViewController.h"
+#import "XmgkViewController.h"
 #import "PzshViewController.h"
+#import "HxsxViewController.h"
 #import "QyysViewController.h"
 
 @interface BaseViewController ()
@@ -125,10 +127,22 @@
             [self presentViewController:controller animated:NO completion:nil];
             break;
         }
+        case navTypeXmgk:
+        {
+            XmgkViewController *controller = [XmgkViewController new];
+            [self presentViewController:controller animated:YES completion:nil];
+            break;
+        }
         case navTypePzsh:
         {
             PzshViewController *controller = [PzshViewController new];
             [self presentViewController:controller animated:NO completion:nil];
+            break;
+        }
+        case navTypeHxsx:
+        {
+            HxsxViewController *hxsxController = [HxsxViewController new];
+            [self presentViewController:hxsxController animated:YES completion:nil];
             break;
         }
         case navTypeXssc:
