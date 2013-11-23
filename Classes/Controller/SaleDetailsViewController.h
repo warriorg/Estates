@@ -8,6 +8,8 @@
 
 #import "BaseViewController.h"
 
-@interface SaleDetailsViewController : BaseViewController
+@interface SaleDetailsViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate>
+
+@property(nonatomic, strong) NSString *roomName;
 
 @end

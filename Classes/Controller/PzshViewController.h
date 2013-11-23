@@ -7,7 +7,8 @@
 //
 
 #import "BaseViewController.h"
+#import "iCarousel.h"
 
-@interface PzshViewController : BaseViewController
+@interface PzshViewController : BaseViewController<iCarouselDataSource, iCarouselDelegate>
 
 @end

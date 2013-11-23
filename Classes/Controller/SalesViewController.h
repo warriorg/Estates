@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface SalesViewController : BaseViewController
+@interface SalesViewController : BaseViewController<UITableViewDataSource, UITableViewDelegate>
 
 @end

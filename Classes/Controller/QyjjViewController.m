@@ -19,6 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [btnCompanyIntro setSelected:YES];
     index = 1;
     [bgImageView setImage:[UIImage imageNamed:@"bg_qyjj_1.jpg"]];
     bgImageView.userInteractionEnabled = YES;

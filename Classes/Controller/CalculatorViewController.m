@@ -17,7 +17,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [btnXssc setSelected:YES];
+
     NSArray *nibView =  [[NSBundle mainBundle] loadNibNamed:@"HouseLoanCalculatorView" owner:self options:nil];
     UIView *calView = [nibView objectAtIndex:0];
 //    calView.center = CGPointMake(650, 250);

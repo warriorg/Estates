@@ -53,13 +53,6 @@
 }
 */
 
-- (void)dealloc {
-	self.delegate = nil;
-	self.dataSource = nil;
-	self.uiGridViewDelegate = nil;
-    [super dealloc];
-}
-
 - (UIGridViewCell *) dequeueReusableCell
 {
 	UIGridViewCell* temp = tempCell;
@@ -103,7 +96,7 @@
 	
     UIGridViewRow *row = (UIGridViewRow *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (row == nil) {
-        row = [[[UIGridViewRow alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        row = [[UIGridViewRow alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
 	
 	int numCols = [uiGridViewDelegate numberOfColumnsOfGridView:self];

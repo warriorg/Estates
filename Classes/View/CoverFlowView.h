@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "iCarousel.h"
 
-@interface CoverFlowView : UIView
+@interface CoverFlowView : UIView<iCarouselDataSource,iCarouselDelegate>
+{
+    iCarousel *coverFlow;
+}
+
+@property(nonatomic, strong) NSMutableArray *items;
+@property(nonatomic, copy)void(^changeIndex)(int index);
+
+- (void)reloadData;
 
 @end

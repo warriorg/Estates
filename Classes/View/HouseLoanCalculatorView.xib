@@ -99,7 +99,7 @@
                     <rect key="frame" x="585" y="243" width="115" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="highlightedColor"/>
+                    <color key="highlightedColor" red="0.0042671535326086474" green="0.0032627167901113758" blue="0.0032141599495774304" alpha="1" colorSpace="calibratedRGB"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="贷款总额：" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdF-TE-P3T">
                     <rect key="frame" x="585" y="272" width="115" height="21"/>

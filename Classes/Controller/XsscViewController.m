@@ -8,6 +8,7 @@
 
 #import "XsscViewController.h"
 #import "CalculatorViewController.h"
+#import "SalesViewController.h"
 
 @interface XsscViewController ()
 
@@ -18,7 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [btnXssc setSelected:YES];
     [self setBackgroudImage:[UIImage imageNamed:@"bg_xssc.jpg"]];
     
     UIButton *btnCal = [[UIButton alloc] initWithFrame:CGRectMake(800, 300, 120, 45)];
@@ -28,12 +29,19 @@
     
     UIButton *btnSales = [[UIButton alloc] initWithFrame:CGRectMake(800, 360, 120, 45)];
     [btnSales setBackgroundImage:[UIImage imageNamed:@"bg_sale_table.png"] forState:UIControlStateNormal];
+    [btnSales addTarget:self action:@selector(beginSales) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:btnSales];
 }
 
 - (void)beginCal
 {
     CalculatorViewController *controller = [CalculatorViewController new];
+    [self presentViewController:controller animated:NO completion:nil];
+}
+
+- (void)beginSales
+{
+    SalesViewController *controller = [SalesViewController new];
     [self presentViewController:controller animated:NO completion:nil];
 }
 
